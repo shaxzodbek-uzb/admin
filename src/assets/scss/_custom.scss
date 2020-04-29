@@ -1,0 +1,267 @@
+// Here you can add other styles
+.c-main{
+    padding-top: 40px;
+    .container-fluid, .container-sm, .container-md, .container-lg, .container-xl{
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+}
+.c-avatar{
+    width: 250px;
+    height: 50px;
+    .c-avatar-img{
+        width: 50px;
+    }
+    .acc-name-wrapper{
+        padding-left: 10px;
+        .name{
+            display: inline-block;
+            font-size: 17px;
+            color: #5a5a5a;
+        }
+        .role{
+            display: inline-block;
+            font-size: 15px;
+            color: #b8b8b8;
+        }
+    }   
+}
+.c-header {
+    box-shadow: rgba(36, 133,229, 0.1) 0 2px 12px;
+}
+.c-sidebar{
+
+    .c-sidebar-brand-full{
+        font-size: 20px;
+        color: #F5F5FB;
+        font-weight: 300;
+    }
+    .c-sidebar-brand-minimized{
+        font-size: 20px;
+        color: #F5F5FB;
+        font-weight: 300;
+    }
+    .c-sidebar-nav{
+        padding-top: 29px;
+        .c-sidebar-nav-item{
+            margin-left: 18px;
+            margin-bottom: 5px;
+            .c-sidebar-nav-link{
+                border-radius: 25px 0 0 25px;
+                font-size: 19px;
+                height: 50px;
+                padding-left: 32px;
+            }
+        }
+    }
+}
+.card {
+    box-shadow: rgba(36, 133,229, 0.1) 0 2px 12px;
+    .card-header{
+        font-size: 24px;
+    }
+    .widget-title{
+        color: #5a5a5a;
+        font-size: 19px;
+    }
+    .widget-counter{
+        padding-top: 8px;
+        font-size: 34px;
+        font-weight: bold;
+    }
+    .badge {
+        font-size: 16px;
+        color: white;
+        font-weight: 300 !important;
+    }
+    .card-body{
+        padding: $card-spacer-y $card-spacer-x;
+    }
+}
+.no-border-all {
+    border: none;
+    * {
+        border: none;
+    }
+}
+.no-border {
+    border: none;
+}
+.border-radius-18{
+    border-radius: 18px !important;
+}
+.search-input{
+    input{
+        border-right: 0;
+    }
+    .input-group-append{
+        .input-group-text {
+            background-color: #ffffff !important;
+        }
+    }
+}
+
+
+
+
+//
+// Basic Bootstrap table
+//
+.custom-table {
+    width: 100%;
+    margin-bottom: $spacer;
+  
+    @include themes($table-theme-map, $create: parent) {
+      color: themes-get-value("table-color");
+      background-color: themes-get-value("table-bg");
+    }
+  
+    th,
+    td {
+        font-size: 18px;
+        color: #5A5A5A;
+        padding: $table-cell-padding;
+        vertical-align: top;
+        border-top: 1px dashed #DCDCDC;
+        @include themes($table-theme-map, $create: parent) {
+        border-top-color: themes-get-value("table-border-color");
+      }
+    }
+    &.users{
+      th,
+      td {
+        padding: 0.2rem;
+      }
+    }
+    
+    
+    thead th {
+      vertical-align: bottom;
+      border: none;
+      font-size: 20px;
+      font-weight: normal;
+      color: #B9B9B9;
+      @include themes($table-theme-map, $create: parent) {
+        border-bottom-color: themes-get-value("table-border-color");
+      }
+    }
+  
+    tbody + tbody {
+      border-top: (2 * $table-border-width) solid;
+  
+      @include themes($table-theme-map, $create: parent) {
+        border-top-color: themes-get-value("table-border-color");
+      }
+    }
+  }
+  
+  
+  // //
+  // // Condensed table w/ half padding
+  // //
+  
+  // .table-sm {
+  //   th,
+  //   td {
+  //     padding: $table-cell-padding-sm;
+  //   }
+  // }
+  
+  
+  // // Border versions
+  // //
+  // // Add or remove borders all around the table and between all the columns.
+  
+  // .table-bordered {
+  //   border: $table-border-width solid;
+  
+  //   @include themes($table-theme-map, $create: parent) {
+  //     border-color: themes-get-value("table-border-color");
+  //   }
+  
+  //   th,
+  //   td {
+  //     border: $table-border-width solid;
+  
+  //     @include themes($table-theme-map, $create: parent) {
+  //       border-color: themes-get-value("table-border-color");
+  //     }
+  //   }
+  
+  //   thead {
+  //     th,
+  //     td {
+  //       border-bottom-width: 2 * $table-border-width;
+  //     }
+  //   }
+  // }
+  
+  // .table-borderless {
+  //   th,
+  //   td,
+  //   thead th,
+  //   tbody + tbody {
+  //     border: 0;
+  //   }
+  // }
+  
+  // // Zebra-striping
+  // //
+  // // Default zebra-stripe styles (alternating gray and transparent backgrounds)
+  
+  // .table-striped {
+  //   tbody tr:nth-of-type(#{$table-striped-order}) {
+  
+  //     @include themes($table-theme-map, $create: parent) {
+  //       background-color: themes-get-value("table-accent-bg");
+  //     }
+  //   }
+  // }
+  
+  
+  // // Hover effect
+  // //
+  // // Placed here since it has to come after the potential zebra striping
+  
+  // .table-hover {
+  //   tbody tr {
+  //     @include hover() {
+  //       @include themes($table-theme-map, $create: parent) {
+  //         color: themes-get-value("table-hover-color");
+  //         background-color: themes-get-value("table-hover-bg");
+  //       }
+  //     }
+  //   }
+  // }
+
+.custom-pagination{
+  
+  .page-item:last-child, .page-item:first-child {
+    .page-link{
+      border: 1px solid;
+      border-radius: 16px !important;
+      font-size: 15px;
+    }
+  }
+  .page-item{
+    .page-link{
+      border: none;
+      border-radius: 16px;
+      line-height: 1;
+      margin-left: 10px !important;
+    }
+  }
+}
+.filter-show{
+  .c-icon{
+    transform: rotate(90deg);
+  }
+}
+.per-page-controller{
+  .per-page-title{
+    font-size: 17px;
+    color: #5A5A5A;
+    line-height: 2.5rem;
+    padding-left: 10px;
+  }
+}
