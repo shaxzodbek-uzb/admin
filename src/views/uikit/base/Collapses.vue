@@ -3,13 +3,13 @@
     <CCol col="12" md="6">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Bootstrap Collapse </strong>
           <div class="card-header-actions">
-            <a 
-              href="https://coreui.io/vue/docs/components/collapse" 
-              class="card-header-action" 
-              rel="noreferrer noopener" 
+            <a
+              href="https://coreui.io/vue/docs/components/collapse"
+              class="card-header-action"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <small class="text-muted">docs</small>
@@ -23,9 +23,9 @@
           <CCollapse :show="collapse" :duration="400">
             <CCard body-wrapper>
               <CCardText>Collapse contents Here</CCardText>
-              <CButton  
-                @click="innerCollapse = !innerCollapse" 
-                size="sm" 
+              <CButton
+                @click="innerCollapse = !innerCollapse"
+                size="sm"
                 color="secondary"
               >
                 Toggle Inner Collapse
@@ -40,17 +40,17 @@
     </CCol>
     <CCol col="12" md="6">
       <CCard>
-        <CCardHeader 
-          @click="cardCollapse = !cardCollapse" 
+        <CCardHeader
+          @click="cardCollapse = !cardCollapse"
           class="btn text-left"
-        > 
+        >
           <strong>Collapsible card</strong>
         </CCardHeader>
         <CCollapse :show="cardCollapse">
           <CCardBody class="m-1">
-            {{text}}
+            {{ text }}
           </CCardBody>
-          </CCollapse>
+        </CCollapse>
       </CCard>
     </CCol>
   </CRow>
@@ -58,8 +58,8 @@
 
 <script>
 export default {
-  name: 'Collapses',
-  data () {
+  name: "Collapses",
+  data() {
     return {
       collapse: false,
       cardCollapse: true,
@@ -74,7 +74,7 @@ export default {
         vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
         synth nesciunt you probably haven't heard of them accusamus labore VHS.
       `
-    }
+    };
   }
-}
+};
 </script>

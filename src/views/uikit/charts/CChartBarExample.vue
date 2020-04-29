@@ -1,26 +1,23 @@
 <template>
-  <CChartBar
-    :datasets="defaultDatasets"
-    labels="months"
-  />
+  <CChartBar :datasets="defaultDatasets" labels="months" />
 </template>
 
 <script>
-import { CChartBar } from '@coreui/vue-chartjs'
+import { CChartBar } from "@coreui/vue-chartjs";
 
 export default {
-  name: 'CChartBarExample',
+  name: "CChartBarExample",
   components: { CChartBar },
   computed: {
-    defaultDatasets () {
+    defaultDatasets() {
       return [
         {
-          label: 'GitHub Commits',
-          backgroundColor: '#f87979',
+          label: "GitHub Commits",
+          backgroundColor: "#f87979",
           data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
         }
-      ]
+      ];
     }
   }
-}
+};
 </script>

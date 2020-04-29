@@ -3,13 +3,13 @@
     <CCol col="12" md="6">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Bootstrap Badge</strong>
           <div class="card-header-actions">
-            <a 
-              href="https://coreui.io/vue/docs/components/badge" 
-              class="card-header-action" 
-              rel="noreferrer noopener" 
+            <a
+              href="https://coreui.io/vue/docs/components/badge"
+              class="card-header-action"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <small class="text-muted">docs</small>
@@ -34,7 +34,7 @@
     <CCol col="12" md="6">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/> Badge
+          <CIcon name="cil-justify-center" /> Badge
           <small>contextual variations</small>
         </CCardHeader>
         <CCardBody>
@@ -50,7 +50,7 @@
       </CCard>
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/> Badge
+          <CIcon name="cil-justify-center" /> Badge
           <small>shape="pill"</small>
         </CCardHeader>
         <CCardBody>
@@ -66,7 +66,7 @@
       </CCard>
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/> Badge
+          <CIcon name="cil-justify-center" /> Badge
           <small>actionable</small>
         </CCardHeader>
         <CCardBody>
@@ -86,6 +86,6 @@
 
 <script>
 export default {
-  name: 'Badges'
-}
+  name: "Badges"
+};
 </script>

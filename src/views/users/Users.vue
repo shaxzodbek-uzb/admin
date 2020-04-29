@@ -6,23 +6,13 @@
           <CRow>
             <CCol md="3">
               <div class="per-page-controller d-flex flex-row">
-                <CSelect
-                  :custom="true"
-                  size="sm"
-                  :options="[7, 10, 15, 30]"
-                />
+                <CSelect :custom="true" size="sm" :options="[7, 10, 15, 30]" />
                 <div class="per-page-title">ta yozuvni korsatish</div>
               </div>
-              
             </CCol>
             <CCol md="6" />
             <CCol md="3">
-              <CInput
-                class="search-input"
-                placeholder="Izlash"
-                size="sm"
-              >
-                
+              <CInput class="search-input" placeholder="Izlash" size="sm">
                 <div slot="append-content">
                   <CIcon name="search" />
                 </div>
@@ -38,26 +28,32 @@
             :fields="fields"
             head-color="light"
             :items-per-page="5"
-            :sorter='{ id: true, avatar: false, username: true, work: true, phone: true, action: false }'
-
+            :sorter="{
+              id: true,
+              avatar: false,
+              username: true,
+              work: true,
+              phone: true,
+              action: false
+            }"
           >
-            <td slot="avatar" class="text-center" slot-scope="{item}">
+            <td slot="avatar" class="text-center" slot-scope="{ item }">
               <div class="c-avatar">
-                <img :src="item.avatar" class="c-avatar-img" alt="">
+                <img :src="item.avatar" class="c-avatar-img" alt="" />
               </div>
             </td>
-            <td slot="username" slot-scope="{item}">
-              <div>{{item.username}}</div>
+            <td slot="username" slot-scope="{ item }">
+              <div>{{ item.username }}</div>
               <div class="small text-muted">
-                {{item.role}}
+                {{ item.role }}
               </div>
             </td>
-            
-            <td slot="action" slot-scope="{item}">
+
+            <td slot="action">
               <CIcon name="more" />
             </td>
 
-            <div slot="action-header" slot-scope="{item}" class="text-center">
+            <div slot="action-header" class="text-center">
               <CIcon name="add" size="lg" />
             </div>
           </CDataTable>
@@ -81,50 +77,54 @@
 </template>
 
 <script>
-import usersData from './UsersData'
+import usersData from "./UsersData";
 export default {
-  name: 'Users',
-  data () {
+  name: "Users",
+  data() {
     return {
       items: usersData,
       fields: [
-        { key: 'id', label:'#' },
-        { key: 'avatar', label:'', sorter:false },
-        { key: 'username', label: 'Ф.И.О', _classes: 'font-weight-bold' },
-        { key: 'work', label: 'Иш жойи ва лавозими' },
-        { key: 'phone', label: 'Телефон рақами' },
-        { key: 'action', sorter:false, __classes: 'text-center' },
-
+        { key: "id", label: "#" },
+        { key: "avatar", label: "", sorter: false },
+        { key: "username", label: "Ф.И.О", _classes: "font-weight-bold" },
+        { key: "work", label: "Иш жойи ва лавозими" },
+        { key: "phone", label: "Телефон рақами" },
+        { key: "action", sorter: false, __classes: "text-center" }
       ],
       activePage: 1
-    }
+    };
   },
   watch: {
     $route: {
       immediate: true,
-      handler (route) {
+      handler(route) {
         if (route.query && route.query.page) {
-          this.activePage = Number(route.query.page)
+          this.activePage = Number(route.query.page);
         }
       }
     }
   },
   methods: {
-    getBadge (status) {
+    getBadge(status) {
       switch (status) {
-        case 'Active': return 'success'
-        case 'Inactive': return 'secondary'
-        case 'Pending': return 'warning'
-        case 'Banned': return 'danger'
-        default: 'primary'
+        case "Active":
+          return "success";
+        case "Inactive":
+          return "secondary";
+        case "Pending":
+          return "warning";
+        case "Banned":
+          return "danger";
+        default:
+          "primary";
       }
     },
-    rowClicked (item, index) {
-      this.$router.push({path: `users/${index + 1}`})
+    rowClicked(item, index) {
+      this.$router.push({ path: `users/${index + 1}` });
     },
-    pageChange (val) {
-      this.$router.push({ query: { page: val }})
+    pageChange(val) {
+      this.$router.push({ query: { page: val } });
     }
   }
-}
+};
 </script>

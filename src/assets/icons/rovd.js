@@ -1,4 +1,6 @@
-export const rovd = ['20.481 14.593',`
+export const rovd = [
+  "20.481 14.593",
+  `
   <g id="Group_494" data-name="Group 494" transform="translate(0.076 -74.055)">
     <g id="Group_493" data-name="Group 493" transform="translate(0 74.13)">
       <g id="Group_492" data-name="Group 492">
@@ -8,4 +10,5 @@ export const rovd = ['20.481 14.593',`
       </g>
     </g>
   </g>
-`]
+`
+];

@@ -7,21 +7,21 @@
 </template>
 
 <script>
-import { CChartLine } from '@coreui/vue-chartjs'
-import { getColor, deepObjectsMerge } from '@coreui/utils/src'
+import { CChartLine } from "@coreui/vue-chartjs";
+import { getColor, deepObjectsMerge } from "@coreui/utils/src";
 
 export default {
-  name: 'CChartLineSimple',
+  name: "CChartLineSimple",
   components: { CChartLine },
   props: {
     ...CChartLine.props,
     borderColor: {
       type: String,
-      default: 'rgba(255,255,255,.55)'
+      default: "rgba(255,255,255,.55)"
     },
     backgroundColor: {
       type: String,
-      default: 'transparent'
+      default: "transparent"
     },
     dataPoints: {
       type: Array,
@@ -29,21 +29,21 @@ export default {
     },
     label: {
       type: String,
-      default: 'Sales'
+      default: "Sales"
     },
     pointed: Boolean,
     pointHoverBackgroundColor: String
   },
   computed: {
-    pointHoverColor () {
+    pointHoverColor() {
       if (this.pointHoverBackgroundColor) {
-        return this.pointHoverBackgroundColor
-      } else if (this.backgroundColor !== 'transparent') {
-        return this.backgroundColor
+        return this.pointHoverBackgroundColor;
+      } else if (this.backgroundColor !== "transparent") {
+        return this.backgroundColor;
       }
-      return this.borderColor
+      return this.borderColor;
     },
-    defaultDatasets () {
+    defaultDatasets() {
       return [
         {
           data: this.dataPoints,
@@ -53,21 +53,21 @@ export default {
           pointHoverBackgroundColor: getColor(this.pointHoverColor),
           label: this.label
         }
-      ]
+      ];
     },
-    pointedOptions () {
+    pointedOptions() {
       return {
         scales: {
           xAxes: [
             {
               offset: true,
               gridLines: {
-                color: 'transparent',
-                zeroLineColor: 'transparent'
+                color: "transparent",
+                zeroLineColor: "transparent"
               },
               ticks: {
                 fontSize: 2,
-                fontColor: 'transparent'
+                fontColor: "transparent"
               }
             }
           ],
@@ -92,17 +92,21 @@ export default {
             hoverRadius: 4
           }
         }
-      }
+      };
     },
-    straightOptions () {
+    straightOptions() {
       return {
         scales: {
-          xAxes: [{
-            display: false
-          }],
-          yAxes: [{
-            display: false
-          }]
+          xAxes: [
+            {
+              display: false
+            }
+          ],
+          yAxes: [
+            {
+              display: false
+            }
+          ]
         },
         elements: {
           line: {
@@ -114,23 +118,23 @@ export default {
             hoverRadius: 4
           }
         }
-      }
+      };
     },
-    defaultOptions () {
-      const options = this.pointed ? this.pointedOptions : this.straightOptions
+    defaultOptions() {
+      const options = this.pointed ? this.pointedOptions : this.straightOptions;
       return Object.assign({}, options, {
         maintainAspectRatio: false,
         legend: {
           display: false
         }
-      })
+      });
     },
-    computedDatasets () {
-      return deepObjectsMerge(this.defaultDatasets, this.datasets || {})
+    computedDatasets() {
+      return deepObjectsMerge(this.defaultDatasets, this.datasets || {});
     },
-    computedOptions () {
-      return deepObjectsMerge(this.defaultOptions, this.options || {})
+    computedOptions() {
+      return deepObjectsMerge(this.defaultOptions, this.options || {});
     }
   }
-}
+};
 </script>

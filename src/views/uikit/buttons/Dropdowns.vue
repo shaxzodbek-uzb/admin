@@ -4,13 +4,13 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Bootstrap Dropdown</strong>
             <div class="card-header-actions">
-              <a 
-                href="https://coreui.io/vue/docs/components/dropdown" 
-                class="card-header-action" 
-                rel="noreferrer noopener" 
+              <a
+                href="https://coreui.io/vue/docs/components/dropdown"
+                class="card-header-action"
+                rel="noreferrer noopener"
                 target="_blank"
               >
                 <small class="text-muted">docs</small>
@@ -19,15 +19,15 @@
           </CCardHeader>
           <CCardBody>
             <div>
-              <CDropdown 
-                toggler-text="Dropdown Button" 
+              <CDropdown
+                toggler-text="Dropdown Button"
                 class="m-2"
                 color="secondary"
               >
                 <CDropdownItem>First Action</CDropdownItem>
                 <CDropdownItem>Second Action</CDropdownItem>
                 <CDropdownItem>Third Action</CDropdownItem>
-                <CDropdownDivider/>
+                <CDropdownDivider />
                 <CDropdownItem>Something else here...</CDropdownItem>
                 <CDropdownItem disabled>Disabled action</CDropdownItem>
               </CDropdown>
@@ -41,20 +41,20 @@
               </CDropdown>
             </div> -->
             <div>
-              <CDropdown 
-                toggler-text="Dropdown with divider" 
+              <CDropdown
+                toggler-text="Dropdown with divider"
                 class="m-2"
                 color="secondary"
               >
                 <CDropdownItem>First item</CDropdownItem>
                 <CDropdownItem>Second item</CDropdownItem>
-                <CDropdownDivider/>
+                <CDropdownDivider />
                 <CDropdownItem>Separated Item</CDropdownItem>
               </CDropdown>
             </div>
             <div>
-              <CDropdown 
-                toggler-text="Dropdown with header" 
+              <CDropdown
+                toggler-text="Dropdown with header"
                 class="m-2"
                 color="secondary"
               >
@@ -69,7 +69,7 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Dropdown </strong>
             <small>positioning</small>
           </CCardHeader>
@@ -101,7 +101,6 @@
                 color="info"
                 class="m-2"
                 placement="top-start"
-
               >
                 <CDropdownItem>Action</CDropdownItem>
                 <CDropdownItem>Another action</CDropdownItem>
@@ -140,17 +139,13 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Dropdown </strong>
             <small>hidden caret</small>
           </CCardHeader>
           <CCardBody>
             <div>
-              <CDropdown
-                color="link"
-                size="lg"
-                :caret="false"
-              >
+              <CDropdown color="link" size="lg" :caret="false">
                 <template #toggler-content>
                   &#x1f50d;<span class="sr-only">Search</span>
                 </template>
@@ -165,7 +160,7 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Dropdown </strong>
             <small>sizing</small>
           </CCardHeader>
@@ -192,7 +187,7 @@
                 <CDropdownItem>Another action</CDropdownItem>
                 <CDropdownItem>Something else here...</CDropdownItem>
               </CDropdown>
-              <br>
+              <br />
               <CDropdown
                 color="secondary"
                 size="sm"
@@ -206,7 +201,8 @@
               <CDropdown
                 color="secondary"
                 size="sm"
-                split toggler-text="Small Split"
+                split
+                toggler-text="Small Split"
                 class="m-2"
               >
                 <CDropdownItem>Action</CDropdownItem>
@@ -222,14 +218,15 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Dropdown </strong>
             <small>headers and accessibility</small>
           </CCardHeader>
           <CCardBody>
             <div>
               <CDropdown
-                toggler-text="Dropdown ARIA" color="primary"
+                toggler-text="Dropdown ARIA"
+                color="primary"
                 class="m-2"
               >
                 <div role="group">
@@ -242,7 +239,7 @@
                   <CDropdownItem>Add</CDropdownItem>
                   <CDropdownItem>Delete</CDropdownItem>
                 </div>
-                <CDropdownDivider/>
+                <CDropdownDivider />
                 <CDropdownItem>
                   Something <strong>not</strong> associated with user
                 </CDropdownItem>
@@ -254,7 +251,7 @@
       <CCol col="12" md="6">
         <CCard>
           <CCardHeader>
-            <CIcon name="cil-justify-center"/>
+            <CIcon name="cil-justify-center" />
             <strong> Dropdown </strong>
             <small><code>color</code></small>
           </CCardHeader>
@@ -358,6 +355,6 @@
 
 <script>
 export default {
-  name: 'Dropdowns'
-}
+  name: "Dropdowns"
+};
 </script>

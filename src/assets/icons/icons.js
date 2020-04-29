@@ -1,99 +1,96 @@
-import {
-  // cibFacebook,
-  // cibTwitter,
-  // cibLinkedin,
-  // cibFlickr,
-  // cibTumblr,
-  // cibXing,
-  // cibGithub,
-  // cibStackOverflow,
-  // cibYoutube,
-  // cibDribbble,
-  // cibInstagram,
-  // cibPinterest,
-  // cibVk,
-  // cibYahoo,
-  // cibBehance,
-  // cibReddit,
-  // cibVimeo,
-  // cibCcMastercard,
-  // cibCcVisa,
-  // cibStripe,
-  // cibPaypal,
-  // cibGooglePay, 
-  // cibCcAmex
-} from '@coreui/icons'
-import {
-  // cifUs,
-  // cifBr,
-  // cifIn,
-  // cifFr,
-  // cifEs,
-  // cifPl
-} from '@coreui/icons'
-import {
-  // cilArrowRight,
-  // cilBan,
-  // cilBasket,
-  // cilBell,
-  // cilCalculator,
-  // cilCalendar,
-  // cilCloudDownload,
-  // cilChartPie,
-  // cilChartLine,
-  // cilCheck,
-  // cilChevronBottom,
-  // cilChevronTop,
-  // cilCheckCircle,
-  // cilCommentSquare,
-  // cilCursor,
-  // cilDrop,
-  // cilDollar,
-  // cilEnvelopeClosed,
-  // cilEnvelopeOpen,
-  // cilEuro,
-  // cilGlobeAlt,
-  // cilGrid,
-  // cilFile,
-  // cilJustifyCenter,
-  // cilLaptop,
-  // cilLayers,
-  // cilLightbulb,
-  // cilList,
-  // cilLocationPin,
-  // cilLockLocked,
-  // cilMagnifyingGlass,
-  // cilMoon,
-  // cilOptions,
-  // cilPencil,
-  // cilPeople,
-  // cilPuzzle,
-  // cilSettings,
-  // cilShieldAlt,
-  // cilSpeech,
-  // cilSpeedometer,
-  // cilStar,
-  // cilTask,
-  // cilUser,
-  // cilUserFemale,
-  // cilUserFollow,
-  // cilXCircle
-} from '@coreui/icons'
-import { logo } from './logo'
-import { user_outline } from './user-outline'
-import { user } from './user'
-import { broadcast } from './broadcast'
-import { income } from './income'
-import { map } from './map'
-import { money } from './money'
-import { rovd } from './rovd'
-import { exports } from './exports'
-import { statistics } from './statistics'
-import { arrow } from './arrow'
-import { search } from './search'
-import { up } from './up'
-import { add } from './add'
-import { more } from './more'
+import // cibFacebook,
+// cibTwitter,
+// cibLinkedin,
+// cibFlickr,
+// cibTumblr,
+// cibXing,
+// cibGithub,
+// cibStackOverflow,
+// cibYoutube,
+// cibDribbble,
+// cibInstagram,
+// cibPinterest,
+// cibVk,
+// cibYahoo,
+// cibBehance,
+// cibReddit,
+// cibVimeo,
+// cibCcMastercard,
+// cibCcVisa,
+// cibStripe,
+// cibPaypal,
+// cibGooglePay,
+// cibCcAmex
+"@coreui/icons";
+import // cifUs,
+// cifBr,
+// cifIn,
+// cifFr,
+// cifEs,
+// cifPl
+"@coreui/icons";
+import // cilArrowRight,
+// cilBan,
+// cilBasket,
+// cilBell,
+// cilCalculator,
+// cilCalendar,
+// cilCloudDownload,
+// cilChartPie,
+// cilChartLine,
+// cilCheck,
+// cilChevronBottom,
+// cilChevronTop,
+// cilCheckCircle,
+// cilCommentSquare,
+// cilCursor,
+// cilDrop,
+// cilDollar,
+// cilEnvelopeClosed,
+// cilEnvelopeOpen,
+// cilEuro,
+// cilGlobeAlt,
+// cilGrid,
+// cilFile,
+// cilJustifyCenter,
+// cilLaptop,
+// cilLayers,
+// cilLightbulb,
+// cilList,
+// cilLocationPin,
+// cilLockLocked,
+// cilMagnifyingGlass,
+// cilMoon,
+// cilOptions,
+// cilPencil,
+// cilPeople,
+// cilPuzzle,
+// cilSettings,
+// cilShieldAlt,
+// cilSpeech,
+// cilSpeedometer,
+// cilStar,
+// cilTask,
+// cilUser,
+// cilUserFemale,
+// cilUserFollow,
+// cilXCircle
+"@coreui/icons";
+import { logo } from "./logo";
+import { user_outline } from "./user-outline";
+import { user } from "./user";
+import { broadcast } from "./broadcast";
+import { income } from "./income";
+import { map } from "./map";
+import { money } from "./money";
+import { rovd } from "./rovd";
+import { exports } from "./exports";
+import { statistics } from "./statistics";
+import { arrow } from "./arrow";
+import { search } from "./search";
+import { up } from "./up";
+import { add } from "./add";
+import { more } from "./more";
 export const iconsSet = Object.assign(
   {},
   {
@@ -187,11 +184,11 @@ export const iconsSet = Object.assign(
     // cibBehance,
     // cibReddit,
     // cibVimeo,
-    // cibCcMastercard, 
-    // cibCcVisa, 
-    // cibStripe, 
-    // cibPaypal, 
+    // cibCcMastercard,
+    // cibCcVisa,
+    // cibStripe,
+    // cibPaypal,
     // cibGooglePay,
     // cibCcAmex
   }
-)
+);

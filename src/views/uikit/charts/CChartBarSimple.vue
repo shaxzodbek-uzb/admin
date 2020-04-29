@@ -7,17 +7,17 @@
 </template>
 
 <script>
-import { CChartBar } from '@coreui/vue-chartjs'
-import { getColor, deepObjectsMerge } from '@coreui/utils/src'
+import { CChartBar } from "@coreui/vue-chartjs";
+import { getColor, deepObjectsMerge } from "@coreui/utils/src";
 
 export default {
-  name: 'CChartBarSimple',
+  name: "CChartBarSimple",
   components: { CChartBar },
   props: {
     ...CChartBar.props,
     backgroundColor: {
       type: String,
-      default: 'rgba(0,0,0,.2)'
+      default: "rgba(0,0,0,.2)"
     },
     pointHoverBackgroundColor: String,
     dataPoints: {
@@ -26,12 +26,12 @@ export default {
     },
     label: {
       type: String,
-      default: 'Sales'
+      default: "Sales"
     },
     pointed: Boolean
   },
   computed: {
-    defaultDatasets () {
+    defaultDatasets() {
       return [
         {
           data: this.dataPoints,
@@ -41,30 +41,34 @@ export default {
           barPercentage: 0.5,
           categoryPercentage: 1
         }
-      ]
+      ];
     },
-    defaultOptions () {
+    defaultOptions() {
       return {
         maintainAspectRatio: false,
         legend: {
           display: false
         },
         scales: {
-          xAxes: [{
-            display: false
-          }],
-          yAxes: [{
-            display: false
-          }]
+          xAxes: [
+            {
+              display: false
+            }
+          ],
+          yAxes: [
+            {
+              display: false
+            }
+          ]
         }
-      }
+      };
     },
-    computedDatasets () {
-      return deepObjectsMerge(this.defaultDatasets, this.datasets || {})
+    computedDatasets() {
+      return deepObjectsMerge(this.defaultDatasets, this.datasets || {});
     },
-    computedOptions () {
-      return deepObjectsMerge(this.defaultOptions, this.options || {})
+    computedOptions() {
+      return deepObjectsMerge(this.defaultOptions, this.options || {});
     }
   }
-}
+};
 </script>

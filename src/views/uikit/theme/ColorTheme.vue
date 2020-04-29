@@ -5,17 +5,17 @@
       :style="{ paddingTop: '75%' }"
     ></div>
     <slot></slot>
-    <ColorView/>
+    <ColorView />
   </CCol>
 </template>
 
 <script>
-import ColorView from './ColorView'
+import ColorView from "./ColorView";
 export default {
-  name: 'ColorTheme',
+  name: "ColorTheme",
   components: { ColorView },
   props: {
-    color: String,
+    color: String
   }
-}
+};
 </script>

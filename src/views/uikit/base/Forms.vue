@@ -6,10 +6,10 @@
           <CCardHeader>
             <strong>Credit Card </strong> <small>Form</small>
             <div class="card-header-actions">
-              <a 
-                href="https://coreui.io/vue/docs/components/form-components" 
-                class="card-header-action" 
-                rel="noreferrer noopener" 
+              <a
+                href="https://coreui.io/vue/docs/components/form-components"
+                class="card-header-action"
+                rel="noreferrer noopener"
                 target="_blank"
               >
                 <small class="text-muted">docs</small>
@@ -19,10 +19,7 @@
           <CCardBody>
             <CRow>
               <CCol sm="12">
-                <CInput
-                  label="Name"
-                  placeholder="Enter your name"
-                />
+                <CInput label="Name" placeholder="Enter your name" />
               </CCol>
             </CRow>
             <CRow>
@@ -37,20 +34,30 @@
               <CCol sm="4">
                 <CSelect
                   label="Month"
-                  :options="[1,2,3,4,5,6,7,8,9,10,11,12]"
+                  :options="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
                 />
               </CCol>
               <CCol sm="4">
                 <CSelect
                   label="Year"
-                  :options="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]"
+                  :options="[
+                    2014,
+                    2015,
+                    2016,
+                    2017,
+                    2018,
+                    2019,
+                    2020,
+                    2021,
+                    2022,
+                    2023,
+                    2024,
+                    2025
+                  ]"
                 />
               </CCol>
               <CCol sm="4">
-                <CInput
-                  label="CVV/CVC"
-                  placeholder="123"
-                />
+                <CInput label="CVV/CVC" placeholder="123" />
               </CCol>
             </CRow>
           </CCardBody>
@@ -62,36 +69,18 @@
             <strong>Company </strong><small>Form</small>
           </CCardHeader>
           <CCardBody>
-            <CInput
-              label="Company"
-              placeholder="Enter your company name"
-            />
-            <CInput
-              label="VAT"
-              placeholder="PL1234567890"
-            />
-            <CInput
-              label="Street"
-              placeholder="Enter street name"
-            />
+            <CInput label="Company" placeholder="Enter your company name" />
+            <CInput label="VAT" placeholder="PL1234567890" />
+            <CInput label="Street" placeholder="Enter street name" />
             <CRow>
               <CCol sm="8">
-                <CInput
-                  label="City"
-                  placeholder="Enter your city"
-                />
+                <CInput label="City" placeholder="Enter your city" />
               </CCol>
               <CCol sm="4">
-                <CInput
-                  label="Postal code"
-                  placeholder="Postal code"
-                />
+                <CInput label="Postal code" placeholder="Postal code" />
               </CCol>
             </CRow>
-            <CInput
-              label="Country"
-              placeholder="Country name"
-            />
+            <CInput label="Country" placeholder="Country name" />
           </CCardBody>
         </CCard>
       </CCol>
@@ -99,9 +88,7 @@
     <CRow>
       <CCol md="6">
         <CCard>
-          <CCardHeader>
-            <strong>Basic Form</strong> Elements
-          </CCardHeader>
+          <CCardHeader> <strong>Basic Form</strong> Elements </CCardHeader>
           <CCardBody>
             <CForm>
               <CInput
@@ -110,23 +97,14 @@
                 horizontal
                 autocomplete="name"
               />
-              <CInput
-                label="Static"
-                value="Username"
-                horizontal
-                plaintext
-              />
+              <CInput label="Static" value="Username" horizontal plaintext />
               <CInput
                 label="Text input"
                 description="This is a help text"
                 placeholder="Text"
                 horizontal
               />
-              <CInput
-                label="Date"
-                type="date"
-                horizontal
-              />
+              <CInput label="Date" type="date" horizontal />
               <CInput
                 label="Email input"
                 description="Please enter your email"
@@ -186,7 +164,7 @@
               <template v-for="(name, key) in checkboxNames">
                 <CRow form class="form-group" :key="name">
                   <CCol tag="label" sm="3" class="col-form-label">
-                    {{name}}
+                    {{ name }}
                   </CCol>
                   <CCol sm="9" :class="key % 2 === 1 ? 'form-inline' : ''">
                     <CInputCheckbox
@@ -205,7 +183,7 @@
               <template v-for="(name, key) in radioNames">
                 <CRow form class="form-group" :key="name">
                   <CCol sm="3">
-                    {{name}}
+                    {{ name }}
                   </CCol>
                   <CInputRadioGroup
                     class="col-sm-9"
@@ -216,20 +194,9 @@
                   />
                 </CRow>
               </template>
-              <CInputFile
-                label="File input"
-                horizontal
-              />
-              <CInputFile
-                label="Multiple file input"
-                horizontal
-                multiple
-              />
-              <CInputFile
-                label="File custom input"
-                horizontal
-                custom
-              />
+              <CInputFile label="File input" horizontal />
+              <CInputFile label="Multiple file input" horizontal multiple />
+              <CInputFile label="File custom input" horizontal custom />
               <CInputFile
                 label="Multiple file custom input"
                 horizontal
@@ -239,30 +206,26 @@
             </CForm>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="primary"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="primary"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
         <CCard>
-          <CCardHeader>
-            <strong>Inline</strong> Form
-          </CCardHeader>
+          <CCardHeader> <strong>Inline</strong> Form </CCardHeader>
 
           <CCardBody>
             <!-- Bootstrap Vue has some problems with Inline forms that's why we use some standard bootstrap classes -->
             <CForm inline>
-              <CInput
-                class="mr-2"
-                placeholder="Jane Doe"
-              >
+              <CInput class="mr-2" placeholder="Jane Doe">
                 <template #label>
                   <small>Name:&nbsp;</small>
                 </template>
               </CInput>
-              <CInput
-                placeholder="jane.doe@example.com"
-                autocomplete="email"
-              >
+              <CInput placeholder="jane.doe@example.com" autocomplete="email">
                 <template #label>
                   <small>Email:&nbsp;</small>
                 </template>
@@ -270,16 +233,18 @@
             </CForm>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="primary"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="primary"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
       </CCol>
       <CCol md="6">
         <CCard>
-          <CCardHeader>
-            <strong>Horizontal</strong> Form
-          </CCardHeader>
+          <CCardHeader> <strong>Horizontal</strong> Form </CCardHeader>
           <CCardBody>
             <CForm>
               <CInput
@@ -301,14 +266,16 @@
             </CForm>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="primary"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="primary"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
         <CCard>
-          <CCardHeader>
-            <strong>Normal</strong> Form
-          </CCardHeader>
+          <CCardHeader> <strong>Normal</strong> Form </CCardHeader>
           <CForm novalidate>
             <CCardBody>
               <CInput
@@ -331,76 +298,80 @@
               />
             </CCardBody>
             <CCardFooter>
-              <CButton type="submit" size="sm" color="primary"><CIcon name="cil-check-circle"/> Submit</CButton>
-              <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+              <CButton type="submit" size="sm" color="primary"
+                ><CIcon name="cil-check-circle" /> Submit</CButton
+              >
+              <CButton type="reset" size="sm" color="danger"
+                ><CIcon name="cil-ban" /> Reset</CButton
+              >
             </CCardFooter>
           </CForm>
         </CCard>
         <CCard>
-          <CCardHeader>
-            Input <strong>Grid</strong>
-          </CCardHeader>
+          <CCardHeader> Input <strong>Grid</strong> </CCardHeader>
           <CCardBody>
             <CRow class="form-group">
               <CCol sm="3">
-                <CInput class="mb-0" placeholder=".col-sm-3"/>
+                <CInput class="mb-0" placeholder=".col-sm-3" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="4">
-                <CInput class="mb-0" placeholder=".col-sm-4"/>
+                <CInput class="mb-0" placeholder=".col-sm-4" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="5">
-                <CInput class="mb-0" placeholder=".col-sm-5"/>
+                <CInput class="mb-0" placeholder=".col-sm-5" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="6">
-                <CInput class="mb-0" placeholder=".col-sm-6"/>
+                <CInput class="mb-0" placeholder=".col-sm-6" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="7">
-                <CInput class="mb-0" placeholder=".col-sm-7"/>
+                <CInput class="mb-0" placeholder=".col-sm-7" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="8">
-                <CInput class="mb-0" placeholder=".col-sm-8"/>
+                <CInput class="mb-0" placeholder=".col-sm-8" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="9">
-                <CInput class="mb-0" placeholder=".col-sm-9"/>
+                <CInput class="mb-0" placeholder=".col-sm-9" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="10">
-                <CInput class="mb-0" placeholder=".col-sm-10"/>
+                <CInput class="mb-0" placeholder=".col-sm-10" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="11">
-                <CInput class="mb-0" placeholder=".col-sm-11"/>
+                <CInput class="mb-0" placeholder=".col-sm-11" />
               </CCol>
             </CRow>
             <CRow class="form-group">
               <CCol sm="12">
-                <CInput class="mb-0" placeholder=".col-sm-12"/>
+                <CInput class="mb-0" placeholder=".col-sm-12" />
               </CCol>
             </CRow>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="primary"><CIcon name="cil-user"/> Login</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="primary"
+              ><CIcon name="cil-user" /> Login</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
         <CCard>
-          <CCardHeader>
-            Input <strong>Sizes</strong>
-          </CCardHeader>
+          <CCardHeader> Input <strong>Sizes</strong> </CCardHeader>
           <CCardBody>
             <CInput
               label="Small input"
@@ -408,11 +379,7 @@
               horizontal
               placeholder="size='sm'"
             />
-            <CInput
-              label="Default input"
-              horizontal
-              placeholder="normal"
-            />
+            <CInput label="Default input" horizontal placeholder="normal" />
             <CInput
               label="Large input"
               size="lg"
@@ -421,19 +388,20 @@
             />
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="primary"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="primary"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
       </CCol>
     </CRow>
     <CRow>
-
       <CCol sm="12" md="6">
         <CCard>
-          <CCardHeader>
-            <strong>Basic Validation</strong> Form
-          </CCardHeader>
+          <CCardHeader> <strong>Basic Validation</strong> Form </CCardHeader>
           <CCardBody>
             <CForm validated novalidate>
               <CInput
@@ -452,9 +420,7 @@
       </CCol>
       <CCol sm="12" md="6">
         <CCard>
-          <CCardHeader>
-            <strong>Custom Validation</strong> Form
-          </CCardHeader>
+          <CCardHeader> <strong>Custom Validation</strong> Form </CCardHeader>
           <CCardBody>
             <CForm>
               <CInput
@@ -478,86 +444,76 @@
     <CRow>
       <CCol sm="4">
         <CCard>
-          <CCardHeader>
-            <strong>Icon/Text</strong> Groups
-          </CCardHeader>
+          <CCardHeader> <strong>Icon/Text</strong> Groups </CCardHeader>
           <CCardBody>
             <CInput placeholder="Username">
               <template #prepend-content><CIcon name="cil-user"/></template>
             </CInput>
-            <CInput
-              type="email"
-              placeholder="Email"
-              autocomplete="email"
-            >
-              <template #append-content><CIcon name="cil-envelope-open"/></template>
+            <CInput type="email" placeholder="Email" autocomplete="email">
+              <template #append-content
+                ><CIcon name="cil-envelope-open"
+              /></template>
             </CInput>
-            <CInput
-              placeholder="ex. $1.000.000"
-              append=".00"
-            >
+            <CInput placeholder="ex. $1.000.000" append=".00">
               <template #prepend-content><CIcon name="cil-euro"/></template>
             </CInput>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="success"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="success"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
       </CCol>
       <CCol sm="4">
         <CCard>
-          <CCardHeader>
-            <strong>Buttons</strong> Groups
-          </CCardHeader>
+          <CCardHeader> <strong>Buttons</strong> Groups </CCardHeader>
           <CCardBody>
             <CInput placeholder="Username">
               <template #prepend>
                 <CButton color="primary">
-                  <CIcon name="cil-magnifying-glass"/> Search
+                  <CIcon name="cil-magnifying-glass" /> Search
                 </CButton>
               </template>
             </CInput>
-            <CInput
-              type="email"
-              placeholder="Email"
-              autocomplete="email"
-            >
+            <CInput type="email" placeholder="Email" autocomplete="email">
               <template #append>
                 <CButton type="submit" color="primary">Submit</CButton>
               </template>
             </CInput>
-            <CInput
-              type="email"
-              placeholder="Email"
-              autocomplete="email"
-            >
+            <CInput type="email" placeholder="Email" autocomplete="email">
               <template #prepend>
-                <CButton color="primary"><CIcon name="cib-facebook" height="14"/></CButton>
+                <CButton color="primary"
+                  ><CIcon name="cib-facebook" height="14"
+                /></CButton>
               </template>
               <template #append>
-                <CButton color="primary"><CIcon name="cib-twitter" height="14"/></CButton>
+                <CButton color="primary"
+                  ><CIcon name="cib-twitter" height="14"
+                /></CButton>
               </template>
             </CInput>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="success"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="success"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
       </CCol>
       <CCol sm="4">
         <CCard>
-          <CCardHeader>
-            <strong>Dropdowns</strong> Groups
-          </CCardHeader>
+          <CCardHeader> <strong>Dropdowns</strong> Groups </CCardHeader>
           <CCardBody>
             <CInput placeholder="Username">
               <template #prepend>
-                <CDropdown
-                  togglerText="Action"
-                  color="primary"
-                >
+                <CDropdown togglerText="Action" color="primary">
                   <CDropdownItem>Action</CDropdownItem>
                   <CDropdownItem>Another action</CDropdownItem>
                   <CDropdownItem>Something else here...</CDropdownItem>
@@ -565,17 +521,9 @@
                 </CDropdown>
               </template>
             </CInput>
-            <CInput
-              type="email"
-              placeholder="Email"
-              autocomplete="email"
-            >
+            <CInput type="email" placeholder="Email" autocomplete="email">
               <template #append>
-                <CDropdown
-                  togglerText="Action"
-                  color="primary"
-                  right
-                >
+                <CDropdown togglerText="Action" color="primary" right>
                   <CDropdownItem>Action</CDropdownItem>
                   <CDropdownItem>Another action</CDropdownItem>
                   <CDropdownItem>Something else here...</CDropdownItem>
@@ -584,13 +532,8 @@
               </template>
             </CInput>
             <CInput placeholder="...">
-
               <template #prepend>
-                <CDropdown
-                  togglerText="Split"
-                  color="primary"
-                  split
-                >
+                <CDropdown togglerText="Split" color="primary" split>
                   <CDropdownItem href="#">Action</CDropdownItem>
                   <CDropdownItem href="#">Another action</CDropdownItem>
                   <CDropdownItem href="#">Something else here...</CDropdownItem>
@@ -599,23 +542,22 @@
               </template>
 
               <template #append>
-                <CDropdown
-                  togglerText="Action"
-                  color="primary"
-                  right
-                >
+                <CDropdown togglerText="Action" color="primary" right>
                   <CDropdownItem>Action</CDropdownItem>
                   <CDropdownItem>Another action</CDropdownItem>
                   <CDropdownItem>Something else here...</CDropdownItem>
                   <CDropdownItem disabled>Disabled action</CDropdownItem>
                 </CDropdown>
               </template>
-
             </CInput>
           </CCardBody>
           <CCardFooter>
-            <CButton type="submit" size="sm" color="success"><CIcon name="cil-check-circle"/> Submit</CButton>
-            <CButton type="reset" size="sm" color="danger"><CIcon name="cil-ban"/> Reset</CButton>
+            <CButton type="submit" size="sm" color="success"
+              ><CIcon name="cil-check-circle" /> Submit</CButton
+            >
+            <CButton type="reset" size="sm" color="danger"
+              ><CIcon name="cil-ban" /> Reset</CButton
+            >
           </CCardFooter>
         </CCard>
       </CCol>
@@ -624,19 +566,23 @@
       <CCol md="6">
         <CCard>
           <CCardHeader>
-            Use the grid for big devices! <small><code>.col-lg-*</code> <code>.col-md-*</code> <code>.col-sm-*</code></small>
+            Use the grid for big devices!
+            <small
+              ><code>.col-lg-*</code> <code>.col-md-*</code>
+              <code>.col-sm-*</code></small
+            >
           </CCardHeader>
           <CCardBody>
             <CRow
               class="form-group"
-              v-for="(number, key) in [4,5,6,7,8]"
+              v-for="(number, key) in [4, 5, 6, 7, 8]"
               :key="key"
             >
               <CCol :col="12 - number">
-                <CInput class="mb-0" :placeholder="`.col-md-${12 - number}`"/>
+                <CInput class="mb-0" :placeholder="`.col-md-${12 - number}`" />
               </CCol>
               <CCol :col="number">
-                <CInput class="mb-0" :placeholder="`.col-md-${number}`"/>
+                <CInput class="mb-0" :placeholder="`.col-md-${number}`" />
               </CCol>
             </CRow>
           </CCardBody>
@@ -657,14 +603,14 @@
           <CCardBody>
             <CRow
               class="form-group"
-              v-for="(number, key) in [4,5,6,7,8]"
+              v-for="(number, key) in [4, 5, 6, 7, 8]"
               :key="key"
             >
               <CCol :col="number">
-                <CInput class="mb-0" :placeholder="`.col-${number}`"/>
+                <CInput class="mb-0" :placeholder="`.col-${number}`" />
               </CCol>
               <CCol :col="12 - number">
-                <CInput class="mb-0" :placeholder="`.col-${12 - number}`"/>
+                <CInput class="mb-0" :placeholder="`.col-${12 - number}`" />
               </CCol>
             </CRow>
           </CCardBody>
@@ -689,19 +635,19 @@
               <CInput prepend="Username">
                 <template #append-content><CIcon name="cil-user"/></template>
               </CInput>
-              <CInput
-                type="email"
-                autocomplete="email"
-                prepend="Email"
-              >
-                <template #append-content><CIcon name="cil-envelope-closed"/></template>
+              <CInput type="email" autocomplete="email" prepend="Email">
+                <template #append-content
+                  ><CIcon name="cil-envelope-closed"
+                /></template>
               </CInput>
               <CInput
                 type="password"
                 autocomplete="current-password"
                 prepend="Password"
               >
-                <template #append-content><CIcon name="cil-shield-alt"/></template>
+                <template #append-content
+                  ><CIcon name="cil-shield-alt"
+                /></template>
               </CInput>
               <div class="form-group form-actions">
                 <CButton type="submit" size="sm" color="primary">
@@ -722,19 +668,19 @@
               <CInput placeholder="Username">
                 <template #append-content><CIcon name="cil-user"/></template>
               </CInput>
-              <CInput
-                placeholder="Email"
-                type="email"
-                autocomplete="email"
-              >
-                <template #append-content><CIcon name="cil-envelope-closed"/></template>
+              <CInput placeholder="Email" type="email" autocomplete="email">
+                <template #append-content
+                  ><CIcon name="cil-envelope-closed"
+                /></template>
               </CInput>
               <CInput
                 placeholder="Password"
                 type="password"
                 autocomplete="current-password"
               >
-                <template #append-content><CIcon name="cil-shield-alt"/></template>
+                <template #append-content
+                  ><CIcon name="cil-shield-alt"
+                /></template>
               </CInput>
               <div class="form-group form-actions">
                 <CButton type="submit" class="btn btn-sm btn-secondary">
@@ -755,19 +701,19 @@
               <CInput placeholder="Username">
                 <template #prepend-content><CIcon name="cil-user"/></template>
               </CInput>
-              <CInput
-                placeholder="Email"
-                type="email"
-                autocomplete="email"
-              >
-                <template #prepend-content><CIcon name="cil-envelope-closed"/></template>
+              <CInput placeholder="Email" type="email" autocomplete="email">
+                <template #prepend-content
+                  ><CIcon name="cil-envelope-closed"
+                /></template>
               </CInput>
               <CInput
                 placeholder="Password"
                 type="password"
                 autocomplete="current-password"
               >
-                <template #prepend-content><CIcon name="cil-shield-alt"/></template>
+                <template #prepend-content
+                  ><CIcon name="cil-shield-alt"
+                /></template>
               </CInput>
               <div class="form-group form-actions">
                 <CButton type="submit" size="sm" color="success">
@@ -784,19 +730,25 @@
         <transition name="fade">
           <CCard v-if="show">
             <CCardHeader>
-              <CIcon name="cil-pencil"/> Form Elements
+              <CIcon name="cil-pencil" /> Form Elements
               <div class="card-header-actions">
                 <CLink href="#" class="card-header-action btn-setting">
-                  <CIcon name="cil-settings"/>
+                  <CIcon name="cil-settings" />
                 </CLink>
                 <CLink
                   class="card-header-action btn-minimize"
-                  @click="formCollapsed=!formCollapsed"
+                  @click="formCollapsed = !formCollapsed"
                 >
-                  <CIcon :name="`cil-chevron-${formCollapsed ? 'bottom' : 'top'}`"/>
+                  <CIcon
+                    :name="`cil-chevron-${formCollapsed ? 'bottom' : 'top'}`"
+                  />
                 </CLink>
-                <CLink href="#" class="card-header-action btn-close" v-on:click="show = !show">
-                  <CIcon name="cil-x-circle"/>
+                <CLink
+                  href="#"
+                  class="card-header-action btn-close"
+                  v-on:click="show = !show"
+                >
+                  <CIcon name="cil-x-circle" />
                 </CLink>
               </div>
             </CCardHeader>
@@ -849,33 +801,43 @@
 
 <script>
 export default {
-  name: 'Forms',
-  data () {
+  name: "Forms",
+  data() {
     return {
       selected: [], // Must be an array reference!
       show: true,
-      horizontal: { label:'col-3', input:'col-9' },
-      options: ['Option 1', 'Option 2', 'Option 3'],
+      horizontal: { label: "col-3", input: "col-9" },
+      options: ["Option 1", "Option 2", "Option 3"],
       selectOptions: [
-        'Option 1', 'Option 2', 'Option 3',
-        { 
-          value: ['some value', 'another value'], 
-          label: 'Selected option'
+        "Option 1",
+        "Option 2",
+        "Option 3",
+        {
+          value: ["some value", "another value"],
+          label: "Selected option"
         }
       ],
-      selectedOption: ['some value', 'another value'],
+      selectedOption: ["some value", "another value"],
 
       formCollapsed: true,
-      checkboxNames: ['Checkboxes', 'Inline Checkboxes',
-                      'Checkboxes - custom', 'Inline Checkboxes - custom'],
-      radioNames: ['Radios', 'Inline Radios',
-                    'Radios - custom', 'Inline Radios - custom']
-    }
+      checkboxNames: [
+        "Checkboxes",
+        "Inline Checkboxes",
+        "Checkboxes - custom",
+        "Inline Checkboxes - custom"
+      ],
+      radioNames: [
+        "Radios",
+        "Inline Radios",
+        "Radios - custom",
+        "Inline Radios - custom"
+      ]
+    };
   },
   methods: {
-    validator (val) {
-      return val ? val.length >= 4 : false
+    validator(val) {
+      return val ? val.length >= 4 : false;
     }
   }
-}
+};
 </script>

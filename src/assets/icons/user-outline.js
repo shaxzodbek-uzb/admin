@@ -1,4 +1,6 @@
-export const user_outline = ['17.849 20.271',`
+export const user_outline = [
+  "17.849 20.271",
+  `
   <g id="Group_482" data-name="Group 482" transform="translate(-0.408 -2.343)">
     <g id="Group_481" data-name="Group 481">
       <g id="Group_480" data-name="Group 480">
@@ -7,4 +9,5 @@ export const user_outline = ['17.849 20.271',`
       </g>
     </g>
   </g>
-`]
+`
+];

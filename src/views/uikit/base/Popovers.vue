@@ -2,13 +2,13 @@
   <div>
     <CCard>
       <CCardHeader>
-        <CIcon name="cil-justify-center"/>
+        <CIcon name="cil-justify-center" />
         <strong> Bootstrap Popovers</strong>
         <div class="card-header-actions">
-          <a 
-            href="https://coreui.io/vue/docs/directives/popover" 
-            class="card-header-action" 
-            rel="noreferrer noopener" 
+          <a
+            href="https://coreui.io/vue/docs/directives/popover"
+            class="card-header-action"
+            rel="noreferrer noopener"
             target="_blank"
           >
             <small class="text-muted">docs</small>
@@ -49,7 +49,7 @@
     </CCard>
     <CCard>
       <CCardHeader>
-        <CIcon name="cil-justify-center"/>
+        <CIcon name="cil-justify-center" />
         <strong> Popovers </strong>
         <small>placement</small>
       </CCardHeader>
@@ -80,16 +80,24 @@
 
 <script>
 export default {
-  name: 'Popovers',
-  data () {
+  name: "Popovers",
+  data() {
     return {
       placements: [
-        'top-start', 'top', 'top-end',
-        'bottom-start', 'bottom', 'bottom-end',
-        'right-start', 'right', 'right-end',
-        'left-start', 'left', 'left-end'
+        "top-start",
+        "top",
+        "top-end",
+        "bottom-start",
+        "bottom",
+        "bottom-end",
+        "right-start",
+        "right",
+        "right-end",
+        "left-start",
+        "left",
+        "left-end"
       ]
-    }
+    };
   }
-}
+};
 </script>

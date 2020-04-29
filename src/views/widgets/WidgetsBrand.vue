@@ -9,11 +9,7 @@
           left-header="459"
           left-footer="feeds"
         >
-          <CIcon
-            name="cib-facebook"
-            height="52"
-            class="my-4"
-          />
+          <CIcon name="cib-facebook" height="52" class="my-4" />
           <CChartLineSimple
             class="c-chart-brand"
             background-color="rgba(255,255,255,.1)"
@@ -22,8 +18,8 @@
             labels="months"
           />
         </CWidgetBrand>
-       </CCol>
-       <CCol md="3" sm="6">
+      </CCol>
+      <CCol md="3" sm="6">
         <CWidgetBrand
           color="twitter"
           right-header="973k"
@@ -31,11 +27,7 @@
           left-header="1.792"
           left-footer="tweets"
         >
-          <CIcon
-            name="cib-twitter"
-            height="52"
-            class="my-4"
-          />
+          <CIcon name="cib-twitter" height="52" class="my-4" />
           <CChartLineSimple
             class="c-chart-brand"
             background-color="rgba(255,255,255,.1)"
@@ -44,8 +36,8 @@
             labels="months"
           />
         </CWidgetBrand>
-       </CCol>
-       <CCol md="3" sm="6">
+      </CCol>
+      <CCol md="3" sm="6">
         <CWidgetBrand
           color="linkedin"
           right-header="500+"
@@ -53,11 +45,7 @@
           left-header="292"
           left-footer="feeds"
         >
-          <CIcon
-            name="cib-linkedin"
-            height="52"
-            class="my-4"
-          />
+          <CIcon name="cib-linkedin" height="52" class="my-4" />
           <CChartLineSimple
             class="c-chart-brand"
             background-color="rgba(255,255,255,.1)"
@@ -66,8 +54,8 @@
             labels="months"
           />
         </CWidgetBrand>
-       </CCol>
-       <CCol md="3" sm="6">
+      </CCol>
+      <CCol md="3" sm="6">
         <CWidgetBrand
           right-header="12"
           right-footer="events"
@@ -75,11 +63,7 @@
           left-footer="meetings"
           color="warning"
         >
-          <CIcon
-            name="cil-calendar"
-            height="52"
-            class="my-4"
-          />
+          <CIcon name="cil-calendar" height="52" class="my-4" />
           <CChartLineSimple
             class="c-chart-brand"
             background-color="rgba(255,255,255,.1)"
@@ -99,14 +83,10 @@
           left-header="459"
           left-footer="feeds"
         >
-          <CIcon
-            name="cib-facebook"
-            height="56"
-            class="my-4"
-          />
+          <CIcon name="cib-facebook" height="56" class="my-4" />
         </CWidgetBrand>
-       </CCol>
-       <CCol md="3" sm="6">
+      </CCol>
+      <CCol md="3" sm="6">
         <CWidgetBrand
           color="twitter"
           right-header="973k"
@@ -114,14 +94,10 @@
           left-header="1.792"
           left-footer="tweets"
         >
-          <CIcon
-            name="cib-twitter"
-            height="56"
-            class="my-4"
-          />
+          <CIcon name="cib-twitter" height="56" class="my-4" />
         </CWidgetBrand>
-       </CCol>
-       <CCol md="3" sm="6">
+      </CCol>
+      <CCol md="3" sm="6">
         <CWidgetBrand
           color="linkedin"
           right-header="500+"
@@ -129,13 +105,9 @@
           left-header="292"
           left-footer="feeds"
         >
-          <CIcon
-            name="cib-linkedin"
-            height="56"
-            class="my-4"
-          />
+          <CIcon name="cib-linkedin" height="56" class="my-4" />
         </CWidgetBrand>
-       </CCol>
+      </CCol>
       <CCol md="3" sm="6">
         <CWidgetBrand
           right-header="12"
@@ -144,11 +116,7 @@
           left-footer="meetings"
           color="warning"
         >
-          <CIcon
-            name="cil-calendar"
-            height="56"
-            class="my-4"
-          />
+          <CIcon name="cil-calendar" height="56" class="my-4" />
         </CWidgetBrand>
       </CCol>
     </template>
@@ -156,17 +124,17 @@
 </template>
 
 <script>
-import { CChartLineSimple } from '../charts/index.js'
+import { CChartLineSimple } from "../base/charts/index.js";
 
 export default {
-  name: 'WidgetsBrand',
+  name: "WidgetsBrand",
   components: {
     CChartLineSimple
   },
   props: {
     noCharts: Boolean
   }
-}
+};
 </script>
 
 <style scoped>

@@ -3,13 +3,13 @@
     <CCol md="12" lg="7">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Bootstrap Carousel</strong>
           <div class="card-header-actions">
-            <a 
-              href="https://coreui.io/vue/docs/components/carousel" 
-              class="card-header-action" 
-              rel="noreferrer noopener" 
+            <a
+              href="https://coreui.io/vue/docs/components/carousel"
+              class="card-header-action"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <small class="text-muted">docs</small>
@@ -17,12 +17,7 @@
           </div>
         </CCardHeader>
         <CCardBody>
-          <CCarousel
-            arrows
-            indicators
-            animate
-            height="400px"
-          >
+          <CCarousel arrows indicators animate height="400px">
             <CCarouselItem
               captionHeader="First Slide"
               image="https://picsum.photos/1024/480/?image=52"
@@ -33,9 +28,7 @@
               :image="{ placeholderColor: 'grey' }"
               captionText="Nulla vitae elit libero, a pharetra augue mollis interdum."
             />
-            <CCarouselItem
-            image="https://picsum.photos/1024/480/?image=54"
-            />
+            <CCarouselItem image="https://picsum.photos/1024/480/?image=54" />
           </CCarousel>
         </CCardBody>
       </CCard>
@@ -45,6 +38,6 @@
 
 <script>
 export default {
-  name: 'Carousels'
-}
+  name: "Carousels"
+};
 </script>

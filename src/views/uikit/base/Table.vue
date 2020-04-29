@@ -1,9 +1,7 @@
 <template>
   <CCard>
     <CCardHeader>
-      <slot name="header">
-        <CIcon name="cil-grid"/> {{caption}}
-      </slot>
+      <slot name="header"> <CIcon name="cil-grid" /> {{ caption }} </slot>
     </CCardHeader>
     <CCardBody>
       <CDataTable
@@ -20,7 +18,7 @@
       >
         <template #status="{item}">
           <td>
-            <CBadge :color="getBadge(item.status)">{{item.status}}</CBadge>
+            <CBadge :color="getBadge(item.status)">{{ item.status }}</CBadge>
           </td>
         </template>
       </CDataTable>
@@ -30,18 +28,18 @@
 
 <script>
 export default {
-  name: 'Table',
+  name: "Table",
   props: {
     items: Array,
     fields: {
       type: Array,
-      default () {
-        return ['username', 'registered', 'role', 'status']
+      default() {
+        return ["username", "registered", "role", "status"];
       }
     },
     caption: {
       type: String,
-      default: 'Table'
+      default: "Table"
     },
     hover: Boolean,
     striped: Boolean,
@@ -51,12 +49,17 @@ export default {
     dark: Boolean
   },
   methods: {
-    getBadge (status) {
-      return status === 'Active' ? 'success'
-        : status === 'Inactive' ? 'secondary'
-          : status === 'Pending' ? 'warning'
-            : status === 'Banned' ? 'danger' : 'primary'
+    getBadge(status) {
+      return status === "Active"
+        ? "success"
+        : status === "Inactive"
+        ? "secondary"
+        : status === "Pending"
+        ? "warning"
+        : status === "Banned"
+        ? "danger"
+        : "primary";
     }
   }
-}
+};
 </script>

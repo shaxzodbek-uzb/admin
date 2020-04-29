@@ -5,8 +5,10 @@
         Headings
       </div>
       <div class="card-body">
-        <p>Documentation and examples for Bootstrap typography,
-          including global settings, headings, body text, lists, and more.</p>
+        <p>
+          Documentation and examples for Bootstrap typography, including global
+          settings, headings, body text, lists, and more.
+        </p>
         <table class="table">
           <thead>
             <tr>
@@ -106,10 +108,10 @@
       </div>
       <div class="card-body">
         <p>
-          Traditional heading elements are designed to work best in the meat
-          of your page content. When you need a heading to stand out,
-          consider using a <strong>display heading</strong>—a larger,
-           slightly more opinionated heading style.
+          Traditional heading elements are designed to work best in the meat of
+          your page content. When you need a heading to stand out, consider
+          using a <strong>display heading</strong>—a larger, slightly more
+          opinionated heading style.
         </p>
         <div class="bd-example bd-example-type">
           <table class="table">
@@ -137,26 +139,35 @@
       </div>
       <div class="card-body">
         <p>
-          Traditional heading elements are designed to work best in the meat
-          of your page content. When you need a heading to stand out,
-          consider using a <strong>display heading</strong>—a larger,
-          slightly more opinionated heading style.
+          Traditional heading elements are designed to work best in the meat of
+          your page content. When you need a heading to stand out, consider
+          using a <strong>display heading</strong>—a larger, slightly more
+          opinionated heading style.
         </p>
         <div class="bd-example">
           <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-          <p><del>
-            This line of text is meant to be treated as deleted text.
-          </del></p>
-          <p><s>
-            This line of text is meant to be treated as no longer accurate.
-          </s></p>
-          <p><ins>
-            This line of text is meant to be treated as an addition to the document.
-          </ins></p>
+          <p>
+            <del>
+              This line of text is meant to be treated as deleted text.
+            </del>
+          </p>
+          <p>
+            <s>
+              This line of text is meant to be treated as no longer accurate.
+            </s>
+          </p>
+          <p>
+            <ins>
+              This line of text is meant to be treated as an addition to the
+              document.
+            </ins>
+          </p>
           <p><u>This line of text will render as underlined</u></p>
-          <p><small>
-            This line of text is meant to be treated as fine print.
-          </small></p>
+          <p>
+            <small>
+              This line of text is meant to be treated as fine print.
+            </small>
+          </p>
           <p><strong>This line rendered as bold text.</strong></p>
           <p><em>This line rendered as italicized text.</em></p>
         </div>
@@ -182,7 +193,10 @@
 
             <dt class="col-sm-3">Euismod</dt>
             <dd class="col-sm-9">
-              <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+              <p>
+                Vestibulum id ligula porta felis euismod semper eget lacinia
+                odio sem nec elit.
+              </p>
               <p>Donec id elit non mi porta gravida at eget metus.</p>
             </dd>
 
@@ -193,8 +207,8 @@
 
             <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
             <dd class="col-sm-9">
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus.
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+              nibh, ut fermentum massa justo sit amet risus.
             </dd>
 
             <dt class="col-sm-3">Nesting</dt>
@@ -215,6 +229,6 @@
 
 <script>
 export default {
-  name: 'Typography'
-}
+  name: "Typography"
+};
 </script>

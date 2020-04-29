@@ -1,7 +1,9 @@
 // Example of SVG converted to js array, so it can be used with CIcon.
-// the first argument is two last values of svg viewBox, 
+// the first argument is two last values of svg viewBox,
 // the second argument is the SVG content stripped of SVG tags
-export const logo = ['556 134',`
+export const logo = [
+  "556 134",
+  `
   <g>
     <g style="fill:#1bbd93;">
       <path d="M347.9818,90.0869l-11.84-43.52-.0644-.1924q0-.5112.6406-.5117h1.2793a.66.66,0,0,1,.7051.5762l10.623,39.68c.042.0859.0859.1279.1289.1279.041,0,.084-.042.127-.1279l10.625-39.68a.657.657,0,0,1,.7031-.5762h1.2168a.54.54,0,0,1,.5762.7041l-11.9043,43.52a.6584.6584,0,0,1-.7041.5761h-1.4082A.6577.6577,0,0,1,347.9818,90.0869Z"/>
@@ -26,4 +28,5 @@ export const logo = ['556 134',`
       </g>
     </g>
   </g>
-`]
+`
+];

@@ -3,13 +3,13 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Bootstrap button group</strong>
           <div class="card-header-actions">
-            <a 
-              href="https://coreui.io/vue/docs/components/button-components" 
-              class="card-header-action" 
-              rel="noreferrer noopener" 
+            <a
+              href="https://coreui.io/vue/docs/components/button-components"
+              class="card-header-action"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <small class="text-muted">docs</small>
@@ -25,7 +25,7 @@
               <CButton color="secondary">Four</CButton>
               <CButton color="secondary" class="d-sm-down-none">Five</CButton>
             </CButtonGroup>
-            <br><br>
+            <br /><br />
             <CButtonGroup>
               <CButton class="d-sm-down-none" color="success">Success</CButton>
               <CButton color="info">Info</CButton>
@@ -41,7 +41,7 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Button group </strong>sizing
         </CCardHeader>
         <CCardBody>
@@ -51,13 +51,13 @@
               <CButton color="secondary">Middle</CButton>
               <CButton color="secondary">Right</CButton>
             </CButtonGroup>
-            <br><br>
+            <br /><br />
             <CButtonGroup size="sm">
               <CButton color="secondary">Left</CButton>
               <CButton color="secondary">Middle</CButton>
               <CButton color="secondary">Right</CButton>
             </CButtonGroup>
-            <br><br>
+            <br /><br />
             <CButtonGroup size="lg">
               <CButton color="secondary">Left</CButton>
               <CButton color="secondary">Middle</CButton>
@@ -70,24 +70,31 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/><strong> Button group </strong>dropdown support
+          <CIcon name="cil-justify-center" /><strong> Button group </strong
+          >dropdown support
         </CCardHeader>
         <CCardBody>
           <div>
             <CButtonGroup>
-              <CButton color="secondary" class="d-sm-down-none">Button 1</CButton>
-              <CButton color="secondary" class="d-sm-down-none">Button 2</CButton>
+              <CButton color="secondary" class="d-sm-down-none"
+                >Button 1</CButton
+              >
+              <CButton color="secondary" class="d-sm-down-none"
+                >Button 2</CButton
+              >
               <CDropdown right text="Menu" color="success">
                 <CDropdownItem>Item 1</CDropdownItem>
                 <CDropdownItem>Item 2</CDropdownItem>
-                <CDropdownDivider/>
+                <CDropdownDivider />
                 <CDropdownItem>Item 3</CDropdownItem>
               </CDropdown>
-              <CButton color="secondary" class="d-sm-down-none">Button 3</CButton>
+              <CButton color="secondary" class="d-sm-down-none"
+                >Button 3</CButton
+              >
               <CDropdown right split text="Split Menu" color="info">
                 <CDropdownItem>Item 1</CDropdownItem>
                 <CDropdownItem>Item 2</CDropdownItem>
-                <CDropdownDivider/>
+                <CDropdownDivider />
                 <CDropdownItem>Item 3</CDropdownItem>
               </CDropdown>
             </CButtonGroup>
@@ -98,7 +105,7 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Button group </strong>vertical variation
         </CCardHeader>
         <CCardBody>
@@ -115,14 +122,16 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          <CIcon name="cil-justify-center"/>
+          <CIcon name="cil-justify-center" />
           <strong> Button toolbar </strong>
           <small>with button groups</small>
         </CCardHeader>
         <CCardBody>
-          <CButtonToolbar aria-label="Toolbar with button groups" >
+          <CButtonToolbar aria-label="Toolbar with button groups">
             <CButtonGroup class="mx-1">
-              <CButton color="secondary" class="d-sm-down-none">&laquo;</CButton>
+              <CButton color="secondary" class="d-sm-down-none"
+                >&laquo;</CButton
+              >
               <CButton color="secondary">&lsaquo;</CButton>
             </CButtonGroup>
             <CButtonGroup class="mx-1">
@@ -132,10 +141,12 @@
             </CButtonGroup>
             <CButtonGroup class="mx-1">
               <CButton color="secondary">&rsaquo;</CButton>
-              <CButton color="secondary" class="d-sm-down-none">&raquo;</CButton>
+              <CButton color="secondary" class="d-sm-down-none"
+                >&raquo;</CButton
+              >
             </CButtonGroup>
           </CButtonToolbar>
-          <hr class="d-sm-down-none"/>
+          <hr class="d-sm-down-none" />
           <CButtonToolbar
             aria-label="Toolbar with button groups and input groups"
             class="d-sm-down-none"
@@ -155,7 +166,7 @@
               class="mb-0 w-25 mx-1"
               size="sm"
               value="Medium"
-              :options="['Large','Medium','Small']"
+              :options="['Large', 'Medium', 'Small']"
               custom
               prepend="Size"
             />
@@ -164,8 +175,10 @@
               <CButton color="secondary">Cancel</CButton>
             </CButtonGroup>
           </CButtonToolbar>
-          <hr/>
-          <CButtonToolbar aria-label="Toolbar with button groups and dropdown menu">
+          <hr />
+          <CButtonToolbar
+            aria-label="Toolbar with button groups and dropdown menu"
+          >
             <CButtonGroup class="mx-1 d-sm-down-none">
               <CButton color="secondary">New</CButton>
               <CButton color="secondary">Edit</CButton>
@@ -193,6 +206,6 @@
 </template>
 <script>
 export default {
-  name: 'ButtonGroups',
-}
+  name: "ButtonGroups"
+};
 </script>

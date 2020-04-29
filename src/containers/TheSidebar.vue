@@ -1,17 +1,16 @@
 <template>
-  <CSidebar 
-    fixed 
+  <CSidebar
+    fixed
     :minimize="minimize"
     :show="show"
-    @update:show="(value) => $store.commit('set', ['sidebarShow', value])"
+    @update:show="value => $store.commit('set', ['sidebarShow', value])"
   >
     <CSidebarBrand class="d-md-down-none" to="/">
-
       <div class="c-sidebar-brand-full">Sergeli tumani</div>
       <div class="c-sidebar-brand-minimized">Sergeli</div>
     </CSidebarBrand>
 
-    <CRenderFunction flat :content-to-render="$options.nav"/>
+    <CRenderFunction flat :content-to-render="$options.nav" />
     <CSidebarMinimizer
       class="d-md-down-none"
       @click.native="$store.commit('set', ['sidebarMinimize', !minimize])"
@@ -20,18 +19,18 @@
 </template>
 
 <script>
-import nav from './_nav'
+import nav from "./_nav";
 
 export default {
-  name: 'TheSidebar',
+  name: "TheSidebar",
   nav,
   computed: {
-    show () {
-      return this.$store.state.sidebarShow 
+    show() {
+      return this.$store.state.sidebarShow;
     },
-    minimize () {
-      return this.$store.state.sidebarMinimize 
+    minimize() {
+      return this.$store.state.sidebarMinimize;
     }
   }
-}
+};
 </script>
