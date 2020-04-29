@@ -124,7 +124,7 @@
 </template>
 
 <script>
-import { CChartLineSimple } from "../base/charts/index.js";
+import { CChartLineSimple } from "../uikit/charts/index.js";
 
 export default {
   name: "WidgetsBrand",

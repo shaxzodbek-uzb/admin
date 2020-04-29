@@ -423,7 +423,7 @@
 <script>
 import WidgetsBrand from "./WidgetsBrand";
 import WidgetsDropdown from "./WidgetsDropdown";
-import { CChartLineSimple, CChartBarSimple } from "../base/charts/index.js";
+import { CChartLineSimple, CChartBarSimple } from "../uikit/charts/index.js";
 
 export default {
   name: "Widgets",

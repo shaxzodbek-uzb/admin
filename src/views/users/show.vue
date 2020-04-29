@@ -23,7 +23,7 @@
 <script>
 import usersData from "./UsersData";
 export default {
-  name: "User",
+  name: "UsersShow",
   beforeRouteEnter(to, from, next) {
     next(vm => {
       vm.usersOpened = from.fullPath.includes("users");

@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import uikitRouter from "./uikit";
+import usersRouter from "./models/users";
+import rovdRouter from "./models/rovd";
 // // Containers
 const TheContainer = () => import("@/containers/TheContainer");
 
@@ -12,10 +14,6 @@ const Page404 = () => import("@/views/pages/Page404");
 const Page500 = () => import("@/views/pages/Page500");
 const Login = () => import("@/views/pages/Login");
 const Register = () => import("@/views/pages/Register");
-
-// Users
-const Users = () => import("@/views/users/Users");
-const User = () => import("@/views/users/User");
 
 Vue.use(Router);
 
@@ -39,32 +37,8 @@ function configRoutes() {
           name: "Dashboard",
           component: Dashboard
         },
-        {
-          path: "users",
-          meta: {
-            label: "Users"
-          },
-          component: {
-            render(c) {
-              return c("router-view");
-            }
-          },
-          children: [
-            {
-              path: "",
-              name: "Users",
-              component: Users
-            },
-            {
-              path: ":id",
-              meta: {
-                label: "User Details"
-              },
-              name: "User",
-              component: User
-            }
-          ]
-        },
+        usersRouter,
+        rovdRouter,
         ...uikitRouter
       ]
     },

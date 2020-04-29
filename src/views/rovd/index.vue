@@ -22,20 +22,13 @@
         </CCardHeader>
         <CCardBody>
           <CDataTable
-            class="mb-0 custom-table users"
+            class="mb-0 custom-table"
             hover
             :items="items"
             :fields="fields"
             head-color="light"
             :items-per-page="5"
-            :sorter="{
-              id: true,
-              avatar: false,
-              username: true,
-              work: true,
-              phone: true,
-              action: false
-            }"
+            sorter
           >
             <td slot="avatar" class="text-center" slot-scope="{ item }">
               <div class="c-avatar">
@@ -62,7 +55,6 @@
               v-show="2"
               :activePage.sync="page"
               :pages="4"
-              v-bind="true"
               :doubleArrows="false"
               class="custom-pagination"
             >
@@ -77,21 +69,20 @@
 </template>
 
 <script>
-import usersData from "./UsersData";
+import usersData from "./rovdData";
 export default {
-  name: "Users",
+  name: "RovdIndex",
   data() {
     return {
       items: usersData,
       fields: [
         { key: "id", label: "#" },
-        { key: "avatar", label: "", sorter: false },
-        { key: "username", label: "Ф.И.О", _classes: "font-weight-bold" },
-        { key: "work", label: "Иш жойи ва лавозими" },
-        { key: "phone", label: "Телефон рақами" },
-        { key: "action", sorter: false, __classes: "text-center" }
+        { key: "desc", label: "Qisqacha mazmun", sorter: true },
+        { key: "file", label: "File" },
+        { key: "registered", label: "Yaratilgan sana" }
       ],
-      activePage: 1
+      activePage: 1,
+      page: 1
     };
   },
   watch: {
