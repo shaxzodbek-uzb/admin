@@ -9,7 +9,7 @@ export default [
         icon: "broadcast",
         badge: {
           color: "primary",
-          text: "NEW"
+          text: "ok"
         }
       },
       {
@@ -28,13 +28,21 @@ export default [
         _name: "CSidebarNavItem",
         name: "Foydalanuvchilar",
         to: "/users",
-        icon: "user_outline"
+        icon: "user_outline",
+        badge: {
+          color: "primary",
+          text: "ok"
+        }
       },
       {
         _name: "CSidebarNavItem",
         name: "Eksportyor",
         to: "/exporters",
-        icon: "exports"
+        icon: "exports",
+        badge: {
+          color: "primary",
+          text: "ok"
+        }
       },
       {
         _name: "CSidebarNavItem",
@@ -45,14 +53,22 @@ export default [
       {
         _name: "CSidebarNavItem",
         name: "Soliq va tushum",
-        to: "/income",
-        icon: "money"
+        to: "/incomes",
+        icon: "money",
+        badge: {
+          color: "primary",
+          text: "ok"
+        }
       },
       {
         _name: "CSidebarNavItem",
         name: "Rovd",
         to: "/rovd",
-        icon: "rovd"
+        icon: "rovd",
+        badge: {
+          color: "primary",
+          text: "ok"
+        }
       }
     ]
   }

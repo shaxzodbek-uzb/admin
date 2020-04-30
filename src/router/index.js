@@ -3,6 +3,8 @@ import Router from "vue-router";
 import uikitRouter from "./uikit";
 import usersRouter from "./models/users";
 import rovdRouter from "./models/rovd";
+import incomeouter from "./models/income";
+import exporterRouter from "./models/exporter";
 // // Containers
 const TheContainer = () => import("@/containers/TheContainer");
 
@@ -39,6 +41,8 @@ function configRoutes() {
         },
         usersRouter,
         rovdRouter,
+        exporterRouter,
+        incomeouter,
         ...uikitRouter
       ]
     },

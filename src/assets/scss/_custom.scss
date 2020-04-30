@@ -133,7 +133,35 @@
         padding: 0.2rem;
       }
     }
-    
+    &.exporters{
+      th,
+      td {
+        padding: 0.3rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        font-size: 15px;
+        border: 1px dashed #DCDCDC;
+        vertical-align: middle !important;
+      }
+      th{
+        text-align: center;
+      }
+    }
+    &.incomes{
+      th,
+      td {
+        padding: 0.3rem;
+        font-size: 15px;
+        border: 1px dashed #DCDCDC;
+        vertical-align: middle !important;
+        .form-group {
+          margin-bottom: 0rem;
+        }
+      }
+      th{
+        text-align: center;
+      }
+    }
     
     thead th {
       vertical-align: bottom;
@@ -264,4 +292,7 @@
     line-height: 2.5rem;
     padding-left: 10px;
   }
+}
+.c-main .container-fluid {
+  padding: 0 30px !important;
 }
