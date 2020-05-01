@@ -6,6 +6,7 @@ import rovdRouter from "./models/rovd";
 import incomeouter from "./models/income";
 import investorRouter from "./models/investor";
 import exporterRouter from "./models/exporter";
+import statisticsRouter from "./models/statistics";
 // // Containers
 const TheContainer = () => import("@/containers/TheContainer");
 
@@ -45,6 +46,7 @@ function configRoutes() {
         exporterRouter,
         incomeouter,
         investorRouter,
+        statisticsRouter,
         ...uikitRouter
       ]
     },

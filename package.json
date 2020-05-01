@@ -27,6 +27,7 @@
     "release": "npm-run-all clearCache lint build test:unit test:e2e"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.9.19",
     "@coreui/coreui": "^3.0.0",
     "@coreui/icons": "^1.0.1",
     "@coreui/utils": "^1.2.4",
