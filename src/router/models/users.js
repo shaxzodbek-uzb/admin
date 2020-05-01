@@ -15,7 +15,7 @@ const usersRouter = {
   children: [
     {
       path: "",
-      name: "index",
+      name: "UsersIndex",
       component: UsersIndex
     },
     {
@@ -23,7 +23,7 @@ const usersRouter = {
       meta: {
         label: "User Details"
       },
-      name: "User",
+      name: "UsersShow",
       component: UsersShow
     }
   ]

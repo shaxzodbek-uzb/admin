@@ -13,7 +13,7 @@ const exporterRouter = {
   children: [
     {
       path: "",
-      name: "index",
+      name: "ExporterIndex",
       component: ExporterIndex
     }
   ]

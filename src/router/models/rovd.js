@@ -13,7 +13,7 @@ const rovdRouter = {
   children: [
     {
       path: "",
-      name: "index",
+      name: "RovdIndex",
       component: RovdIndex
     }
   ]

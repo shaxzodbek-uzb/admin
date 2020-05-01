@@ -5,150 +5,199 @@
         style="font-size: 20px; color: #5A5A5A !important;"
         class="text-center"
       >
-        Параметры экспорта продукции предприятий Сергелийского района города
-        Ташкента,<br />
-        в том числе субъектов малого бизнеса на 2019 год
+        Сергели туманида 2019-2020 йилларда амалга ошириладиган инвестиция
+        лойиҳаларининг<br />
+        МАНЗИЛЛИ РЎЙХАТИ
       </p>
     </CCol>
     <CCol md="12">
-      <CCard class="no-border border-radius-18">
-        <CCardHeader class="no-border border-radius-18 pb-1 pt-4">
-          <CRow>
-            <CCol md="4">
-              <div class="per-page-controller d-flex flex-row">
-                <CSelect :custom="true" size="sm" :options="[7, 10, 15, 30]" />
-                <div class="per-page-title">ta yozuvni korsatish</div>
-              </div>
-            </CCol>
-            <CCol md="8" class="d-flex justify-content-end pb-3">
-              <CButton
-                key="filter"
-                shape="pill"
-                color="primary"
-                size="sm"
-                class="px-4 py-1 mx-1"
-              >
-                Yangi qo'shish
-              </CButton>
-              <CButton
-                key="filter"
-                shape="pill"
-                color="primary"
-                size="sm"
-                class="px-4 py-1 mx-1"
-              >
-                Excel export
-              </CButton>
-              <CButton
-                key="filter"
-                shape="pill"
-                color="primary"
-                size="sm"
-                class="px-4 py-1 mx-1"
-              >
-                Statistika
-              </CButton>
-            </CCol>
-          </CRow>
-        </CCardHeader>
-        <CCardBody class=" p-3">
-          <CDataTable
-            class="mb-0 custom-table exporters"
-            hover
-            :items="items"
-            :fields="fields"
-            head-color="light"
-            :items-per-page="5"
-            responsive
-          >
-            <td slot="avatar" class="text-center" slot-scope="{ item }">
-              <div class="c-avatar">
-                <img :src="item.avatar" class="c-avatar-img" alt="" />
-              </div>
-            </td>
-            <td slot="username" slot-scope="{ item }">
-              <div>{{ item.username }}</div>
-              <div class="small text-muted">
-                {{ item.role }}
-              </div>
-            </td>
-
-            <td slot="action">
-              <CIcon name="more" />
-            </td>
-
-            <div slot="action-header" class="text-center">
-              <CIcon name="add" size="lg" />
-            </div>
-          </CDataTable>
-          <div class="d-flex justify-content-end my-3">
-            <CPagination
-              v-show="2"
-              :activePage.sync="page"
-              :pages="4"
-              :doubleArrows="false"
-              class="custom-pagination"
-            >
-              <div slot="previous-button">Oldingi</div>
-              <div slot="next-button">Keyingi</div>
-            </CPagination>
+      <CRow>
+        <CCol md="4">
+          <div class="per-page-controller d-flex flex-row">
+            <CSelect :custom="true" size="sm" :options="[7, 10, 15, 30]" />
+            <div class="per-page-title">ta yozuvni korsatish</div>
           </div>
-          <CAlert color="info">
-            <CRow>
-              <CCol md="3">Итого:</CCol>
-              <CCol md="3">Прогноз: 0</CCol>
-              <CCol md="3">Факт: 0</CCol>
-              <CCol md="3">Процент: NaN</CCol>
-            </CRow>
-          </CAlert>
-        </CCardBody>
-      </CCard>
+        </CCol>
+        <CCol md="8" class="d-flex justify-content-end pb-3">
+          <CButton
+            key="filter1"
+            shape="pill"
+            color="primary"
+            size="sm"
+            class="px-4 py-1 mx-1"
+          >
+            Yangi qo'shish
+          </CButton>
+          <CButton
+            key="filter2"
+            shape="pill"
+            color="primary"
+            size="sm"
+            class="px-4 py-1 mx-1"
+          >
+            Excel export
+          </CButton>
+          <CButton
+            key="filter3"
+            shape="pill"
+            color="primary"
+            size="sm"
+            class="px-4 py-1 mx-1"
+          >
+            Statistika
+          </CButton>
+        </CCol>
+      </CRow>
+      <CDataTable
+        :items="items"
+        :fields="fields"
+        class="custom-table investor"
+        hover
+      >
+        <template #status="{item}">
+          <td>
+            <CBadge :color="getBadge(item.status)">
+              {{ item.status }}
+            </CBadge>
+          </td>
+        </template>
+        <template #show_details="{item, index}">
+          <td class="p-2" @click="toggleDetails(item, index)">
+            <CIcon name="arrow_primary" />
+          </td>
+        </template>
+        <template #details="{item}">
+          <CCollapse
+            :show="Boolean(item._toggled)"
+            :duration="collapseDuration"
+          >
+            <CCardBody>
+              <CRow>
+                <CCol md="4">
+                  <p><b class="title">Сектор:</b> 2</p>
+                  <p>
+                    <b class="title">Лойиҳа манзили:</b>SPUTNIK 10-MAVZE, 63A-UY
+                  </p>
+                  <p><b class="title">Директор:</b>Mирхидоватов Азам</p>
+                  <p><b class="title">Телефон рақами:</b>(71) 2584715</p>
+                  <p>
+                    <b class="title">Хорижий ҳамкор номи:</b>Jiangsu Newamstar
+                    Packaging Machinery Co.,Ltd.
+                  </p>
+                </CCol>
+                <CCol md="4">
+                  <p><b class="title">Давлати:</b> Хитой</p>
+                  <p>
+                    <b class="title">Хизмат кўрсатувчи тижорат банки:</b>Ипотека
+                    банк
+                  </p>
+                  <p><b class="title">Иш ўринлари:</b>1231</p>
+                  <p><b class="title">Ишга тушиш муддати:</b>01.12.2019</p>
+                  <p><b class="title">СТИР:</b>206206943</p>
+                </CCol>
+                <CCol md="4">
+                  <p>
+                    <b class="title">Лойиҳанинг умумий қиймати минг доллар:</b>
+                    4975
+                  </p>
+                  <p>
+                    <b class="title"
+                      >2019 йилда ўзлаштириш прогнози Жами минг доллар:
+                    </b>
+                    1232
+                  </p>
+                  <p>
+                    <b class="title">
+                      2019 йилда ўзлаштириш прогнози хорижий инвестиция, (минг
+                      долл.):
+                    </b>
+                    1232
+                  </p>
+                  <p><b class="title">Фойдаланувчи:</b>206206943</p>
+                  <p><b class="title">Сана:</b>04.03.2020</p>
+                </CCol>
+              </CRow>
+            </CCardBody>
+          </CCollapse>
+        </template>
+        <td slot="action">
+          <CIcon name="more" />
+        </td>
+
+        <div slot="action-header" class="text-center"></div>
+      </CDataTable>
+      <div class="d-flex justify-content-end my-3">
+        <CPagination
+          v-show="2"
+          :activePage.sync="page"
+          :pages="4"
+          :doubleArrows="false"
+          class="custom-pagination"
+        >
+          <div slot="previous-button">Oldingi</div>
+          <div slot="next-button">Keyingi</div>
+        </CPagination>
+      </div>
+      <CAlert color="info">
+        <CDataTable :items="footer_items" class="custom-table footer-table">
+        </CDataTable>
+      </CAlert>
     </CCol>
   </CRow>
 </template>
 
 <script>
 import investorData from "./investorData";
+const footer_items = [
+  {
+    "Иш ўринлари": 5905,
+    "Лойиҳанинг умумий қиймати млн.сўм": 2127701,
+    "Лойиҳанинг умумий қиймати минг доллар": 124532,
+    "ўз маблағи, млн. сўм": 5905,
+    "хорижий инвестиция, (минг долл.)": 56743,
+    "2019 йилда ўзлаштириш прогнози Жами млн.сўм": 5905,
+    "2019 йилда ўзлаштириш прогнози Жами минг доллар": 123214,
+    '2019 йилда ўзлаштириш прогнози "ўз маблағи, (млн. сўм)"': 4556,
+    "2019 йилда ўзлаштириш прогнози хорижий инвестиция, (минг долл.)": 45743
+  }
+];
+
+const fields = [
+  {
+    key: "show_details",
+    label: "",
+    sorter: false,
+    filter: false
+  },
+  { key: "id", label: "№" },
+  { key: "company_name", label: "Ташаббускор корхона" },
+  { key: "project_name", label: "Лойиҳа номи" },
+  { key: "overal_sum", label: "Лойиҳанинг умумий қиймати млн.сўм" },
+  { key: "own_sum", label: "Ўз маблағи млн. сўм" },
+  { key: "investition", label: "Xорижий инвестиция, (минг долл.)" },
+  { key: "exchange", label: "2019 йилда ўзлаштириш прогнози Жами млн.сўм" },
+  {
+    key: "own_sum_exchange",
+    label: '2019 йилда ўзлаштириш прогнози "ўз маблағи,(млн. сўм)"'
+  },
+  {
+    key: "action"
+  }
+];
+
 export default {
-  name: "ExporterIndex",
+  name: "AdvancedTables",
   data() {
     return {
-      items: investorData,
-      fields: [
-        { key: "id", label: "№" },
-        {
-          key: "company_name",
-          label: "Наименование предприятий"
-        },
-        { key: "type", label: "Наименование продукции" },
-        { key: "main", label: "Основание" },
-        { key: "sector", label: "Номер сектора" },
-        { key: "inn", label: "ИНН" },
-        { key: "okpo", label: "ОКПО" },
-        { key: "full_name", label: "ФИО руководителя/учредителя" },
-        { key: "phone", label: "Контактные номера телефонов" },
-        { key: "bank", label: "Наименование обслуживающего банка" },
-        { key: "problems", label: "Проблемы" },
-        { key: "prognoz", label: "Прогноз" },
-        { key: "fact", label: "Факт" },
-        { key: "percent", label: "Процент" },
-        { key: "user_id", label: "Пользователь" },
-        { key: "date", label: "Дата" },
-        { key: "action" }
-      ],
-      activePage: 1,
-      page: 1
+      page: 1,
+      items: investorData.map((item, id) => {
+        return { ...item, id };
+      }),
+      fields,
+      footer_items,
+      details: [],
+      collapseDuration: 0
     };
-  },
-  watch: {
-    $route: {
-      immediate: true,
-      handler(route) {
-        if (route.query && route.query.page) {
-          this.activePage = Number(route.query.page);
-        }
-      }
-    }
   },
   methods: {
     getBadge(status) {
@@ -165,11 +214,12 @@ export default {
           "primary";
       }
     },
-    rowClicked(item, index) {
-      this.$router.push({ path: `users/${index + 1}` });
-    },
-    pageChange(val) {
-      this.$router.push({ query: { page: val } });
+    toggleDetails(item) {
+      this.$set(this.items[item.id], "_toggled", !item._toggled);
+      this.collapseDuration = 300;
+      this.$nextTick(() => {
+        this.collapseDuration = 0;
+      });
     }
   }
 };

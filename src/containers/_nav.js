@@ -48,7 +48,11 @@ export default [
         _name: "CSidebarNavItem",
         name: "Investor",
         to: "/investors",
-        icon: "income"
+        icon: "income",
+        badge: {
+          color: "primary",
+          text: "ok"
+        }
       },
       {
         _name: "CSidebarNavItem",

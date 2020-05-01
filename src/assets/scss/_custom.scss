@@ -162,6 +162,59 @@
         text-align: center;
       }
     }
+    &.footer-table{
+      th,
+      td {
+        border: none;
+        padding: 0.3rem;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle !important;
+        font-weight: 300;
+      }
+      th{
+        color: black;
+        text-align: center;
+      }
+    }
+    &.investor{
+      table{
+        border-collapse:separate; 
+        border-spacing: 0 8px; 
+      }
+      th{
+        text-align: center;
+      }
+      th,
+      td {
+        padding: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 15px;
+        border: none;
+        vertical-align: middle !important;
+        .form-group {
+          margin-bottom: 0rem;
+        }
+        background-color: white;
+        .title{
+          color: #627ECC;
+          padding-right: 5px;
+        }
+      }
+      th:first-child,
+      td:first-child{
+        border-radius: 4px 0 0 4px;
+      }
+      th:last-child,
+      td:last-child{
+        border-radius: 0 4px 4px 0;
+      }
+      tr{
+        box-shadow: rgba(36, 133,229, 0.1) 0 2px 12px;
+        border-radius: 4px;
+      }
+    }
     
     thead th {
       vertical-align: bottom;

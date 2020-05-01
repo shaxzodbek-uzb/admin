@@ -4,6 +4,7 @@ import uikitRouter from "./uikit";
 import usersRouter from "./models/users";
 import rovdRouter from "./models/rovd";
 import incomeouter from "./models/income";
+import investorRouter from "./models/investor";
 import exporterRouter from "./models/exporter";
 // // Containers
 const TheContainer = () => import("@/containers/TheContainer");
@@ -43,6 +44,7 @@ function configRoutes() {
         rovdRouter,
         exporterRouter,
         incomeouter,
+        investorRouter,
         ...uikitRouter
       ]
     },

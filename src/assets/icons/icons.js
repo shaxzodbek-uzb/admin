@@ -87,6 +87,7 @@ import { rovd } from "./rovd";
 import { exports } from "./exports";
 import { statistics } from "./statistics";
 import { arrow } from "./arrow";
+import { arrow_primary } from "./arrow-primary";
 import { search } from "./search";
 import { up } from "./up";
 import { add } from "./add";
@@ -105,6 +106,7 @@ export const iconsSet = Object.assign(
     exports,
     statistics,
     arrow,
+    arrow_primary,
     search,
     up,
     add,

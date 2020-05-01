@@ -13,7 +13,7 @@ const incomeRouter = {
   children: [
     {
       path: "",
-      name: "index",
+      name: "IncomeIndex",
       component: IncomeIndex
     }
   ]
